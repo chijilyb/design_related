@@ -1,0 +1,17 @@
+background:
+	wrap algorithms, different algorithm has different interfaces, different params
+	not like usual codec which can use uniform interface
+goal:
+	provide interface as uniform as possible for easy to extend more algorithms without modify existed algorithm
+
+1.h 2.h 3.h 4.h: mimic algorithm interface header files
+ob.h: object based c++ design, most common instinct way
+oo.h: object orientation, need a way to convey params, here use void*
+crtp.h: template, crtp way to fulfill, don't see the good of this way
+policy.h: template, policy based design, don't see the good of this way
+delegate.h: template, good to benchmark input params and time cost
+variadic.h: template, variadic params input, save typing
+variadic_warp.h: wrap class to id, little expose class
+variadic_wrap_special.h: for special interface
+variadic_wrap_special_return.h: auto detect return value, high uniform interface
+
